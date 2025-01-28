@@ -1,0 +1,9 @@
+https://dev-mosaic.stealthplatform.cloud/auth/realms/platform/protocol/openid-connect/token
+
+https://dev-mosaic.stealthplatform.cloud/auth/realms/mobileplatform/protocol/openid-connect/token
+
+
+yours mobile app UI dev
+
+keycloak auth - https://www.youtube.com/watch?v=5z6gy4WGnUs&t=452s&ab_channel=DeKay
+

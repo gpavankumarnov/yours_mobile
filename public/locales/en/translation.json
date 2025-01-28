@@ -1,0 +1,8 @@
+{
+   "app":{
+    "defaultUserName":"Test",
+    "defaultGreetingMessage": "Hi, {{userName}}",
+    "logout": "Logout",
+    "changePassword": "Change password"
+   }
+}
