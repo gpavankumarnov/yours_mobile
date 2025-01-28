@@ -3,7 +3,8 @@ pipeline{
     stages{
         stage('Git checkout'){
            steps{
-            git checkout url : "https://github.com/gpavankumarnov/yours_mobile.git"
+            git checkout url : "https://github.com/gpavankumarnov/yours_mobile.git",
+            branch:"master"
            }
         }
     }
