@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint:ci": "npm run lint -- --quiet",
+    "sonar": "sonar-scanner"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
