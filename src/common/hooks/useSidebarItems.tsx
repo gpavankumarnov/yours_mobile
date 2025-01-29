@@ -47,7 +47,7 @@ export default function useSidebarItems(): SidebarItemProps[][] {
       .filter((item) =>
         checkGroupsAndRoles(
           item.groups,
-          item.paths?.map(({ role }) => role)
+          // item.paths?.map(({ role }) => role)
         )
       )
       .map(
