@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-    // tools {
-    //     nodejs 'nodejs' // Replace with the exact name you gave in "Global Tool Configuration"
-    // }
+    tools {
+        nodejs 'nodejs' // Replace with the exact name you gave in "Global Tool Configuration"
+    }
 
     environment {
         SONARQUBE_INSTALLATION = 'SonarQube CE' 
