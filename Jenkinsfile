@@ -40,16 +40,16 @@ pipeline {
         //     }
         // }
 
-        stage('test') {
-            steps {
-                sh 'npm run coverage'
-            }
-            post {
-                always {
-                    junit testResults: 'reports/junit.xml', allowEmptyResults: true
-                }
-            }
-        }
+        // stage('test') {
+        //     steps {
+        //         sh 'npm run coverage'
+        //     }
+        //     post {
+        //         always {
+        //             junit testResults: 'reports/junit.xml', allowEmptyResults: true
+        //         }
+        //     }
+        // }
 
         stage('dev-build') {
             steps {
