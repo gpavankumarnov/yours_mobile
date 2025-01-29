@@ -1,15 +1,15 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs 'nodejs' // Replace with the exact name you gave in "Global Tool Configuration"
-    }
+    // tools {
+    //     nodejs 'nodejs' // Replace with the exact name you gave in "Global Tool Configuration"
+    // }
 
     environment {
         SONARQUBE_INSTALLATION = 'SonarQube CE' 
         SERVICE_NAME = 'yours_mobile'
         BRANCH_NAME = 'master'
-         
+        GIT_URL = 'https://github.com/gpavankumarnov/yours_mobile.git'
     }
 
     stages {
@@ -23,7 +23,7 @@ pipeline {
 
         stage('Git Checkout') {
             steps {
-                git url: 'https://github.com/gpavankumarnov/yours_mobile.git', branch: 'master'
+                git url: "${env.GIT_URL}", branch: 'master'
             }
         }
 
