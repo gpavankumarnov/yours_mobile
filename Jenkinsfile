@@ -45,7 +45,7 @@ pipeline {
             cleanWs()
         }
         success {
-            bitbucketStatusNotify buildState: 'SUCCESSFUL', credentialsId: "${BITBUCKET_OAUTH_CREDENTIAL_ID}", repoSlug: "${SERVICE_NAME}", commitId: "${GIT_COMMIT}"
+            bitbucketStatusNotify buildState: 'SUCCESSFUL', repoSlug: "${SERVICE_NAME}"
         }
     }
 }
