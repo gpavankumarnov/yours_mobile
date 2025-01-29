@@ -27,33 +27,15 @@ pipeline {
             }
         }
 
-        stage('deps'){
+        stage('NPM Install') {
             steps {
-                  sh 'npm ci'
-        sh 'npm run clean'
+               sh "npm install"
             }
         }
 
-        // stage('lint') {
-        //     steps {
-        //         sh 'npm run lint'
-        //     }
-        // }
-
-        // stage('test') {
-        //     steps {
-        //         sh 'npm run coverage'
-        //     }
-        //     post {
-        //         always {
-        //             junit testResults: 'reports/junit.xml', allowEmptyResults: true
-        //         }
-        //     }
-        // }
-
-        stage('dev-build') {
+         stage('Node build') {
             steps {
-                sh 'npm run build'
+               sh "npm run build"
             }
         }
     }
