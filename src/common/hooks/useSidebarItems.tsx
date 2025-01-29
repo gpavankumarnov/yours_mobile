@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { useLocation, useNavigate } from "react-router"
 import Group from "../../core/services/Group"
-import Permission from "../../core/services/Permission"
 import { UserService } from "../../core/services/UserService"
 import { MenuItem, MenuItemPath, menuItems } from "../components/Sidebar/ItemsData"
 import { SidebarItemProps } from "../components/Sidebar/Sidebarbody"
@@ -21,8 +20,8 @@ export default function useSidebarItems(): SidebarItemProps[][] {
     const isJustEmployee = UserService.hasGroup(employeeGroupForCompare)
     return isJustEmployee || UserService.hasAnyRole(roles) || false
   }
-
-  const checkGroupsAndRoles = (groups: Group[], roles: Permission[]) => {
+//roles: Permission[]
+  const checkGroupsAndRoles = (groups: Group[]) => {
     if (groups.length === 1 && groups.includes(Group.EMPLOYEE)) {      
       return groups.includes(Group.EMPLOYEE) 
     }

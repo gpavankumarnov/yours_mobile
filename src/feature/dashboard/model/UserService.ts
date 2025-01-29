@@ -1,7 +1,7 @@
 
 export interface UserService {
      name:string
-     phoneNum:number
+     phoneNum:string
      email:string
      address:string
      issue:string

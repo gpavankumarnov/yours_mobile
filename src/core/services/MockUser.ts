@@ -1,7 +1,6 @@
 
 import { getTenantContext } from '../../common/utils/utilities'
 import Group from './Group'
-import Permission from './Permission'
 import { User } from './UserService'
 
 /**
@@ -15,13 +14,13 @@ const mockUser: User = {
   selectedTenant: getTenantContext(),
   groups: [`${Group.EMPLOYEE}_${getTenantContext()}`],
   roles: [
-    Permission.MIND_DASHBOARD_PAGE_VIEW,
-    Permission.MIND_PURCHASE_ORDER_VIEW,
-    Permission.MIND_PURCHASE_ORDER_EDIT,
-    Permission.MIND_INTEGRATION_CONFIG_READ,
-    Permission.MIND_PURCHASE_ORDER_DEPARTMENT_VIEW,
-    Permission.MIND_PURCHASE_ORDER_DEPARTMENT_EDIT,
-    Permission.MIND_TENANT_PARAMETERS_SETUP
+    // Permission.MIND_DASHBOARD_PAGE_VIEW,
+    // Permission.MIND_PURCHASE_ORDER_VIEW,
+    // Permission.MIND_PURCHASE_ORDER_EDIT,
+    // Permission.MIND_INTEGRATION_CONFIG_READ,
+    // Permission.MIND_PURCHASE_ORDER_DEPARTMENT_VIEW,
+    // Permission.MIND_PURCHASE_ORDER_DEPARTMENT_EDIT,
+    // Permission.MIND_TENANT_PARAMETERS_SETUP
     // Permission.MOP_SECRETS_READ,
     // Permission.MOP_SECRETS_WRITE,
   ]

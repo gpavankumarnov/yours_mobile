@@ -1,7 +1,7 @@
 import type { Action, ThunkAction } from '@reduxjs/toolkit'
 import { combineSlices, configureStore } from '@reduxjs/toolkit'
 import { dashboardSlice } from '../../feature/dashboard/store/dashboardSlice'
-import { issueTypeSlice } from '../../feature/dashboard/store/referenceData/IssueTypeSlice'
+import { issueTypeSlice } from '../../feature/dashboard/store/referenceData/issueTypeSlice'
 
 /** 
 this file contains 

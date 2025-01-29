@@ -14,7 +14,7 @@ const SidebarFooter = ({ onIconClick, status }: SidebarFooterProps) => {
     <Box sx={footer}>
       <Box sx={handler}>
         <IconButton onClick={onIconClick} aria-label="expand/collapse"
-        sx={[styles.handlerIcon.base, styles.handlerIcon[status]]}
+        sx={[styles.handlerIcon.base]}
         >
           <ChevronRight titleAccess={status === SidebarStatuses.OPEN ? 'collapse' : 'expand'} />
         </IconButton>

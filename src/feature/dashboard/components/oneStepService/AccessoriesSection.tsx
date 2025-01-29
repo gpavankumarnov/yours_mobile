@@ -1,13 +1,13 @@
-import { Box, styled } from "@mui/material";
+import { Box } from "@mui/material";
 import Service from "./Service";
 import { OneStepServicePageProps } from "./ServiceSection";
 
-const Image = styled('img')({
-  width: '20%',
-  height: '10%',
-  border:'2px solid',
-  objectFit:'contain'
-});
+// const Image = styled('img')({
+//   width: '20%',
+//   height: '10%',
+//   border:'2px solid',
+//   objectFit:'contain'
+// });
 
 
 const AccessoriesSection = (props:OneStepServicePageProps) => {

@@ -22,6 +22,7 @@ const SidebarItem = (props: SidebarItemSingleProps) => {
   const handleClick = () => {
     setIsOpen((prevState) => (expanded ? !prevState : true));
   };
+console.log("isopen", isOpen);
 
   const handleClose = () => {
     setIsOpen(false);

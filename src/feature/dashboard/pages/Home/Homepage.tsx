@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styled from "styled-components";
 import DataGridComp from "../../components/DataGridComp/DataGridComp";
 import InfiniteCarousel from "../../components/InfiniteCarousel";
@@ -30,12 +29,12 @@ const Wrapper = styled.div`
 `
 
 
-const Note = styled.div`
-  font-size: 18px;
-  font-weight: 200;
-  margin-bottom: 40px;
-  color: #7c8e9a;
-`;
+// const Note = styled.div`
+//   font-size: 18px;
+//   font-weight: 200;
+//   margin-bottom: 40px;
+//   color: #7c8e9a;
+// `;
 
 const Text = styled.div`
   font-size: 35px;
@@ -56,7 +55,7 @@ this file contains
 
 const Homepage = () => {
 
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  // const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const carouselData = {list1:row1, list2:row2}
   

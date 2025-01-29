@@ -12,12 +12,12 @@ import { UserService } from "../../../feature/dashboard/model/UserService";
 
 interface LoadOnAutoCompleteWrapperProps {
   name: FieldPath<UserService>;
-  rules?: Record<string, any>;
+  rules?: Record<string, unknown>;
   options: AutocompleteOptionItem[];
   label: string;
   helperText: string;
   isRequired: boolean;
-  error?: any;
+  error?: boolean;
   open: boolean;
   onOpen: () => void;
   onClose: () => void;
@@ -51,23 +51,21 @@ const LoadOnAutoCompleteWrapper = (props: LoadOnAutoCompleteWrapperProps) => {
     open,
     onOpen,
     onClose,
-    isLoading,
-    isError,
+  
   } = props;
   const { control } = useFormContext<UserService>();
 
   //This onChange is from react hook form.
   //when we select a newval, we first check if its a valid value then send to react hook form.
   const handleOnChange = (
+    _: React.SyntheticEvent<Element, Event> | null, // Ignored event parameter
     newValue: OptionValue[] | null,
-    onChange: (...event: any[]) => void
+    onChange: (value: OptionValue[] | null) => void
   ) => {
     if (newValue) {
       // Map the array of OptionValue to their `id`s
       onChange(newValue);
-    } else {
-      onChange([]);
-    }
+    } 
   };
 
   const getValue = (
@@ -130,7 +128,7 @@ const LoadOnAutoCompleteWrapper = (props: LoadOnAutoCompleteWrapperProps) => {
             }
 
             onChange={(event, newValue: OptionValue[] | null) =>
-              handleOnChange(newValue, onChange)
+              handleOnChange(event, newValue, onChange)
             }
             value={getValue(retValue)}
             style={{ width: 300 }}

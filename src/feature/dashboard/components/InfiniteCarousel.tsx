@@ -72,7 +72,7 @@ const Image = styled.img`
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 `;
 
-const InfiniteCarousel = ({ list1, list2 }: InfiniteCarouselProps) => {
+const InfiniteCarousel = ({ list1 }: InfiniteCarouselProps) => {
 
   const list3 = [img4, img5, img9]
   return (

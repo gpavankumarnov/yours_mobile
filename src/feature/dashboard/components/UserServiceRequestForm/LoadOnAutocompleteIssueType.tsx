@@ -3,7 +3,7 @@ import { useFormContext } from "react-hook-form";
 import LoadOnAutoCompleteWrapper from "../../../../common/components/form-wrapper/LoadOnAutoCompleteWrapper";
 import { useAppDispatch, useAppSelector } from "../../../../core/stateManagement/hooks";
 import { UserService } from "../../model/UserService";
-import { fetchAllIssueTypes, selectIssueTypeIsFetchError, selectIssueTypeIsFetching, selectIssueTypes } from "../../store/referenceData/IssueTypeSlice";
+import { fetchAllIssueTypes, selectIssueTypeIsFetchError, selectIssueTypeIsFetching, selectIssueTypes } from "../../store/referenceData/issueTypeSlice";
 
 const LoadOnAutocompleteIssueType = () => {
     const {formState:{errors}} = useFormContext<UserService>();
@@ -23,11 +23,6 @@ useEffect(()=>{
   }
 }, [open])
 
-    // const options =  [
-    //     { id: '2', label: 'Charger Related Issue', disabled:false },
-    //     { id: '1', label: 'Battery Issue',disabled:false },
-    //     { id: '3', label: 'Display Issue', disabled:false }
-    //   ]
 
   return (
         <LoadOnAutoCompleteWrapper 
