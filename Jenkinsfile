@@ -6,5 +6,6 @@ pipeline {
                 git url: 'https://github.com/gpavankumarnov/yours_mobile.git', branch: 'master'
             }
         }
+        
     }
 }
