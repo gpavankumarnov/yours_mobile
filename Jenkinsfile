@@ -27,6 +27,13 @@ pipeline {
             }
         }
 
+        stage('deps'){
+            steps {
+                  sh 'npm ci'
+        sh 'npm run clean'
+            }
+        }
+
         stage('lint') {
             steps {
                 sh 'npm run lint'
