@@ -45,7 +45,7 @@ pipeline {
             cleanWs()
         }
         success {
-            bitbucketStatusNotify buildState: 'SUCCESSFUL', repoSlug: "${SERVICE_NAME}"
+            githubNotify buildState: 'SUCCESSFUL', repoSlug: "${SERVICE_NAME}"
         }
     }
 }
