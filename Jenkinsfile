@@ -27,6 +27,13 @@ pipeline {
             }
         }
 
+        stage('clean'){
+            steps{
+                sh 'npm ci'
+        sh 'npm run clean'
+            }
+        }
+
         stage('NPM Install') {
             steps {
                sh "npm install"
