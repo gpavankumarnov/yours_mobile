@@ -40,12 +40,12 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            cleanWs()
-        }
-        success {
-            githubNotify buildState: 'SUCCESSFUL', repoSlug: "${SERVICE_NAME}"
-        }
-    }
+    // post {
+    //     always {
+    //         cleanWs()
+    //     }
+    //     success {
+    //         githubNotify buildState: 'SUCCESSFUL', repoSlug: "${SERVICE_NAME}"
+    //     }
+    // }
 }
