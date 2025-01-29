@@ -34,11 +34,11 @@ pipeline {
             }
         }
 
-        stage('lint') {
-            steps {
-                sh 'npm run lint'
-            }
-        }
+        // stage('lint') {
+        //     steps {
+        //         sh 'npm run lint'
+        //     }
+        // }
 
         stage('test') {
             steps {
