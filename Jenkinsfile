@@ -8,13 +8,13 @@ pipeline {
     }
 
     stages {
-        stage('init') {
-            steps {
-                githubNotify buildState: 'INPROGRESS', repoSlug: "${SERVICE_NAME}"
-                echo "Service name: ${SERVICE_NAME}"
-                echo "Branch name: ${BRANCH_NAME}"
-            }
-        }
+        // stage('init') {
+        //     steps {
+        //         githubNotify buildState: 'INPROGRESS', repoSlug: "${SERVICE_NAME}"
+        //         echo "Service name: ${SERVICE_NAME}"
+        //         echo "Branch name: ${BRANCH_NAME}"
+        //     }
+        // }
 
         stage('Git Checkout') {
             steps {
