@@ -11,7 +11,7 @@ environment {
     stages {
         stage('init') {
             steps{
-            githubNotify buildState : 'INPROGRESS' repoSlug: "${SERVICE_NAME}"
+            githubNotify buildState : 'INPROGRESS', repoSlug: "${SERVICE_NAME}"
             echo "Service name: ${SERVICE_NAME}"
             echo "Branch name: ${BRANCH_NAME}"
             }
